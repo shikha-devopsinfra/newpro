@@ -55,7 +55,7 @@ virtual_machine_config = {
     vnet_name      = "vnet-dev-infratodo"
     snet_name      = "subnet1-dev-infratodo"
     pip_name       = "pip-frontend-dev-infratodo"
-    size           = "Standard B1s"
+    size           = "Standard_B1s"
 
     admin_username = "shikhaaryan"
     admin_password = "Azuredevops@8"
@@ -78,7 +78,7 @@ virtual_machine_config = {
     vnet_name      = "vnet-dev-infratodo"
     snet_name       = "subnet2-dev-infratodo"
     pip_name       = "pip-backend-dev-infratodo"
-    size           = "Standard B1s"
+    size           = "Standard_B1s"
 
     admin_username = "shikhaaryan"
     admin_password = "Azuredevops@"

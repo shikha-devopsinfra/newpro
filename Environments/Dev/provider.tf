@@ -1,10 +1,10 @@
 terraform {
-  backend "azurerm" {
-    resource_group_name  = "imax-rg"
-    storage_account_name = "imaxstgs"
-    container_name       = "imaxcontainerss"
-    key                  = "Development/Development.tfstate"
-  }
+  #backend "azurerm" {
+   # resource_group_name  = "imax-rg"
+    #storage_account_name = "imaxstgs"
+    #container_name       = "imaxcontainerss"
+    #key                  = "Development/Development.tfstate"
+  #}
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"

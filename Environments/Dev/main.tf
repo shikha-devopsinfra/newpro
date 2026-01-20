@@ -25,7 +25,7 @@ module "pip_name" {
 
 module "virtual_machine" {
   source     = "../../Child-Modules/Linux_VM"
-  depends_on = [module.subnet, module.key_vault, module.pip_name,module.secret_user,module.secret_paswd]
+  depends_on = [module.subnet, module.pip_name]
 
   vm_config = var.virtual_machine_config
 

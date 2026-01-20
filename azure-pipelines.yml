@@ -1,0 +1,45 @@
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+
+pool:
+  name: shikha
+
+stages:
+  - stage: terraformInstaller
+    displayName: Terraform Installer 
+    jobs:
+      - job: terraformInstaller
+        displayName: Terraform Installer
+        steps:
+          - task: TerraformInstaller@1
+            inputs:
+              terraformVersion: 'latest'
+
+          - task: TerraformTaskV4@4
+            displayName: Terraform init
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/Environments/Dev'
+              backendServiceArm: 'shikhaConnection'
+              backendAzureRmOverrideSubscriptionID: '2e333137-3307-4678-a744-a2d37508c632'
+              backendAzureRmResourceGroupName: 'imax-rg'
+              backendAzureRmStorageAccountName: 'imaxstgs'
+              backendAzureRmContainerName: 'imaxcontainerss'
+              backendAzureRmKey: 'Development/Development.tfstate'
+          - task: TerraformTask@5
+            displayName: Terraform Plan
+            inputs:
+              provider: 'azurerm'
+              command: 'plan'
+              workingDirectory: '$(System.DefaultWorkingDirectory)\Environments\Dev'
+              environmentServiceNameAzureRM: 'shikhaConnection'
+          - task: TerraformTask@5
+            inputs:
+              provider: 'azurerm'
+              command: 'apply'
+              workingDirectory: '$(System.DefaultWorkingDirectory)\Environments\Dev'
+              environmentServiceNameAzureRM: 'shikhaConnection'

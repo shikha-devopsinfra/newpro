@@ -65,10 +65,10 @@ virtual_machine_config = {
 #     sku_image       = "18_04-lts-gen2"
 #     version_image   = "latest"
 
-publisher = "Canonical"
-offer     = "0001-com-ubuntu-server-jammy"
-sku       = "22_04-lts-gen2"
-version   = "latest"
+publisher_image = "Canonical"
+offer_image    = "0001-com-ubuntu-server-jammy"
+sku_image       = "22_04-lts-gen2"
+version_image  = "latest"
 
 
     kv_name     = "imaxkey"
@@ -94,10 +94,10 @@ version   = "latest"
 #     sku_image       = "18_04-lts-gen2"
 #     version_image   = "latest"
 
-publisher = "Canonical"
-offer     = "0001-com-ubuntu-server-jammy"
-sku       = "22_04-lts-gen2"
-version   = "latest"
+publisher_image = "Canonical"
+offer_image    = "0001-com-ubuntu-server-jammy"
+sku_image       = "22_04-lts-gen2"
+version_image  = "latest
 
     kv_name     = "imaxkey"
     secret_name = "imaxadmin"

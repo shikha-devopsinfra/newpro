@@ -55,15 +55,21 @@ virtual_machine_config = {
     vnet_name      = "vnet-dev-infratodo"
     snet_name      = "subnet1-dev-infratodo"
     pip_name       = "pip-frontend-dev-infratodo"
-    size           = "Standard_B1s"
+    size           = "Standard_B2s"
 
     admin_username = "shikhaaryan"
     admin_password = "Azuredevops@8"
 
-    publisher_image = "Canonical"
-    offer_image     = "UbuntuServer"
-    sku_image       = "18_04-lts-gen2"
-    version_image   = "latest"
+   #  publisher_image = "Canonical"
+#     offer_image     = "UbuntuServer"
+#     sku_image       = "18_04-lts-gen2"
+#     version_image   = "latest"
+
+publisher = "Canonical"
+offer     = "0001-com-ubuntu-server-jammy"
+sku       = "22_04-lts-gen2"
+version   = "latest"
+
 
     kv_name     = "imaxkey"
     secret_name = "imaxadmin"
@@ -78,15 +84,20 @@ virtual_machine_config = {
     vnet_name      = "vnet-dev-infratodo"
     snet_name       = "subnet2-dev-infratodo"
     pip_name       = "pip-backend-dev-infratodo"
-    size           = "Standard_B1s"
+    size           = "Standard_B2s"
 
     admin_username = "shikhaaryan"
     admin_password = "Azuredevops@"
 
-    publisher_image = "Canonical"
-    offer_image     = "UbuntuServer"
-    sku_image       = "18.04-LTS-gen2"
-    version_image   = "latest"
+   #  publisher_image = "Canonical"
+#     offer_image     = "UbuntuServer"
+#     sku_image       = "18_04-lts-gen2"
+#     version_image   = "latest"
+
+publisher = "Canonical"
+offer     = "0001-com-ubuntu-server-jammy"
+sku       = "22_04-lts-gen2"
+version   = "latest"
 
     kv_name     = "imaxkey"
     secret_name = "imaxadmin"
